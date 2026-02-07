@@ -2,13 +2,17 @@
 
 **Single-View to 3D Scene in Under a Second -- Powered by Apple's SHARP Research**
 
+## 📋 Quick Summary
+
+> 📸 **單張照片到 3D 場景，不到一秒完成！** 本專案實作 Apple SHARP 研究成果，透過單一前饋神經網路，將任意 2D 照片轉換為高品質 3D 高斯潑濺（Gaussian Splatting）表示。🧠 核心技術包含影像編碼器、多解析度解碼器、單眼深度估計與高斯參數預測，一次推理即可產出具有 **絕對深度的度量級 3D 模型**。🎮 內建基於 SuperSplat 的互動式網頁檢視器（Next.js 架構），使用者上傳照片後可即時在瀏覽器中 360 度探索 3D 場景。🎬 支援 CUDA 加速的相機軌跡影片渲染，輸出 .mp4 動畫。⚡ 支援 CPU、CUDA 及 Apple MPS（Metal）多裝置推理。📊 相較先前最先進技術，LPIPS 降低 25-34%、DISTS 降低 21-43%，展現強大的零樣本泛化能力。🏗️ 適合電腦視覺研究者、3D 內容創作者、以及需要快速從照片生成 3D 資產的開發者使用。
+
 ---
 
-## Why This Exists
+## 🤔 Why This Exists
 
 Generating a full 3D scene from a single photograph has long been one of the hardest problems in computer vision. This project implements Apple's SHARP approach (Sharp Monocular View Synthesis), which produces photorealistic 3D Gaussian representations from a single 2D image in one feedforward pass -- no multi-view capture, no scanning, no waiting. It pairs the ML inference pipeline with a custom web-based 3D viewer built on SuperSplat for immediate interactive exploration of generated scenes.
 
-## Architecture
+## 🏗️ Architecture
 
 ```
 Single 2D Image (any photograph)
@@ -46,7 +50,7 @@ Single 2D Image (any photograph)
 - **Multi-device inference** -- runs on CPU, CUDA, and Apple MPS (Metal)
 - **Zero-shot generalization** across datasets, reducing LPIPS by 25-34% and DISTS by 21-43% vs. prior state of the art
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -58,7 +62,7 @@ Single 2D Image (any photograph)
 | Video Rendering | gsplat (CUDA only) |
 | Package Manager | pip, pyproject.toml |
 
-## Quick Start
+## 🏁 Quick Start
 
 ### ML Pipeline
 
@@ -86,7 +90,7 @@ npm run dev
 # Open http://localhost:3000
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 monocular-3d-reconstruction/
