@@ -6,6 +6,10 @@
 
 Monocular 3D Reconstruction 實作單張影像到 3D 場景的快速重建流程，將 2D 照片轉換為可渲染的 3D 表示。適合用於研究復現、即時 3D 內容生成原型，以及評估單目重建在 AR/VR 與視覺化應用的可行性。
 
+## About (EN)
+
+Monocular 3D Reconstruction implements single-image 3D scene generation with Gaussian-style representations. It is useful for research replication, rapid 3D content prototyping, and AR/VR feasibility studies.
+
 ## 📋 Quick Summary
 
 > 📸 **單張照片到 3D 場景，不到一秒完成！** 本專案實作 Apple SHARP 研究成果，透過單一前饋神經網路，將任意 2D 照片轉換為高品質 3D 高斯潑濺（Gaussian Splatting）表示。🧠 核心技術包含影像編碼器、多解析度解碼器、單眼深度估計與高斯參數預測，一次推理即可產出具有 **絕對深度的度量級 3D 模型**。🎮 內建基於 SuperSplat 的互動式網頁檢視器（Next.js 架構），使用者上傳照片後可即時在瀏覽器中 360 度探索 3D 場景。🎬 支援 CUDA 加速的相機軌跡影片渲染，輸出 .mp4 動畫。⚡ 支援 CPU、CUDA 及 Apple MPS（Metal）多裝置推理。📊 相較先前最先進技術，LPIPS 降低 25-34%、DISTS 降低 21-43%，展現強大的零樣本泛化能力。🏗️ 適合電腦視覺研究者、3D 內容創作者、以及需要快速從照片生成 3D 資產的開發者使用。
